@@ -1,0 +1,658 @@
+{
+  "kit": {
+    "theme": "violet",
+    "accent": "fff4aabd"
+  },
+  "style": {
+    "background": "ff302c37",
+    "accent": "fff4aabd",
+    "text": "fffff1e2",
+    "muted": "ffd7c9d1"
+  },
+  "pages": [
+    {
+      "name": "HOME",
+      "controls": [
+        {
+          "param": "Memory Time",
+          "widget": "knob"
+        },
+        {
+          "param": "Freeze",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Explore",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Explore",
+          "widget": "knob"
+        },
+        {
+          "param": "Dry / Texture",
+          "widget": "fader"
+        },
+        {
+          "param": "Clean Level",
+          "widget": "fader"
+        },
+        {
+          "param": "FX Gain",
+          "widget": "fader"
+        },
+        {
+          "param": "Master Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Clean Send",
+          "widget": "fader"
+        },
+        {
+          "param": "Texture Send",
+          "widget": "fader"
+        },
+        {
+          "param": "Rev Tail",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Time Mode",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Time Speed",
+          "widget": "knob"
+        },
+        {
+          "param": "Fresh Notes",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Texture Linger",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "CAPTURE",
+      "controls": [
+        {
+          "param": "Memory Time",
+          "widget": "knob"
+        },
+        {
+          "param": "Keep Playing",
+          "widget": "knob"
+        },
+        {
+          "param": "Freeze",
+          "widget": "switch"
+        },
+        {
+          "param": "Smart Memory",
+          "widget": "switch"
+        },
+        {
+          "param": "Fresh After",
+          "widget": "knob"
+        },
+        {
+          "param": "Sensitivity",
+          "widget": "knob"
+        },
+        {
+          "param": "Memory Fade",
+          "widget": "knob"
+        },
+        {
+          "param": "Regenerate",
+          "widget": "knob"
+        },
+        {
+          "param": "Familiarity",
+          "widget": "knob"
+        },
+        {
+          "param": "Texture Linger",
+          "widget": "knob"
+        },
+        {
+          "param": "Soft Limit",
+          "widget": "switch"
+        },
+        {
+          "param": "Tempo Fallback",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "GRAINS",
+      "controls": [
+        {
+          "param": "Grain Size",
+          "widget": "knob"
+        },
+        {
+          "param": "Grain Density",
+          "widget": "knob"
+        },
+        {
+          "param": "Grain Spray",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverse",
+          "widget": "knob"
+        },
+        {
+          "param": "Stereo Width",
+          "widget": "knob"
+        },
+        {
+          "param": "Grain Explore",
+          "widget": "knob"
+        },
+        {
+          "param": "Grains Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Grain Pool",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Note",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Grain Flavor",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Scale",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Picker",
+          "widget": "slider",
+          "overlay": "menu"
+        }
+      ]
+    },
+    {
+      "name": "LOOPS",
+      "controls": [
+        {
+          "param": "Loop Amount",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Rate",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Loop Size",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Repeats",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Reverse",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Drift",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Explore",
+          "widget": "knob"
+        },
+        {
+          "param": "Loops Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Phrase Style",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Phrase Full",
+          "widget": "knob"
+        },
+        {
+          "param": "Phrase Change",
+          "widget": "knob"
+        },
+        {
+          "param": "Familiarity",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Note",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Loop Flavor",
+          "widget": "switch"
+        },
+        {
+          "param": "Loop Pool",
+          "widget": "switch"
+        },
+        {
+          "param": "Loop Picker",
+          "widget": "slider",
+          "overlay": "menu"
+        }
+      ]
+    },
+    {
+      "name": "PITCH",
+      "controls": [
+        {
+          "param": "Scale",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Root Note",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Grain Note",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Loop Note",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Grain Flavor",
+          "widget": "switch"
+        },
+        {
+          "param": "Loop Flavor",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Scale",
+          "widget": "switch"
+        },
+        {
+          "param": "Loop Scale",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Pool",
+          "widget": "switch"
+        },
+        {
+          "param": "Loop Pool",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Picker",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Loop Picker",
+          "widget": "slider",
+          "overlay": "menu"
+        }
+      ]
+    },
+    {
+      "name": "POOL",
+      "controls": [
+        {
+          "param": "Oct -12",
+          "widget": "switch"
+        },
+        {
+          "param": "Fifth -7",
+          "widget": "switch"
+        },
+        {
+          "param": "Original",
+          "widget": "switch"
+        },
+        {
+          "param": "Fifth +7",
+          "widget": "switch"
+        },
+        {
+          "param": "Oct +12",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Pool",
+          "widget": "switch"
+        },
+        {
+          "param": "Loop Pool",
+          "widget": "switch"
+        },
+        {
+          "param": "Grain Picker",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Loop Picker",
+          "widget": "slider",
+          "overlay": "menu"
+        }
+      ]
+    },
+    {
+      "name": "TIME",
+      "controls": [
+        {
+          "param": "Time Mode",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Time Speed",
+          "widget": "knob"
+        },
+        {
+          "param": "Time Depth",
+          "widget": "knob"
+        },
+        {
+          "param": "Motion Amount",
+          "widget": "knob"
+        },
+        {
+          "param": "Motion Rate",
+          "widget": "knob"
+        },
+        {
+          "param": "Fresh Notes",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Melt Time",
+          "widget": "knob"
+        },
+        {
+          "param": "Texture Linger",
+          "widget": "knob"
+        },
+        {
+          "param": "Grain Explore",
+          "widget": "knob"
+        },
+        {
+          "param": "Loop Explore",
+          "widget": "knob"
+        },
+        {
+          "param": "Phrase Style",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Loop Rate",
+          "widget": "slider",
+          "overlay": "menu"
+        }
+      ]
+    },
+    {
+      "name": "TAPE",
+      "controls": [
+        {
+          "param": "Tape On",
+          "widget": "switch"
+        },
+        {
+          "param": "Clean Tape",
+          "widget": "fader"
+        },
+        {
+          "param": "Texture Tape",
+          "widget": "fader"
+        },
+        {
+          "param": "Tape Output",
+          "widget": "fader"
+        },
+        {
+          "param": "Wow",
+          "widget": "knob"
+        },
+        {
+          "param": "Flutter",
+          "widget": "knob"
+        },
+        {
+          "param": "Wear",
+          "widget": "knob"
+        },
+        {
+          "param": "Warmth",
+          "widget": "knob"
+        },
+        {
+          "param": "Brightness",
+          "widget": "knob"
+        },
+        {
+          "param": "Stereo Drift",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "SPACE",
+      "controls": [
+        {
+          "param": "Reverb Mood",
+          "widget": "switch"
+        },
+        {
+          "param": "Rev Tail",
+          "widget": "knob"
+        },
+        {
+          "param": "Rev Size",
+          "widget": "knob"
+        },
+        {
+          "param": "Rev PreDelay",
+          "widget": "knob"
+        },
+        {
+          "param": "Rev Darkness",
+          "widget": "knob"
+        },
+        {
+          "param": "Rev Width",
+          "widget": "knob"
+        },
+        {
+          "param": "Rev Wet",
+          "widget": "fader"
+        },
+        {
+          "param": "Reverb Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Clean Send",
+          "widget": "fader"
+        },
+        {
+          "param": "Texture Send",
+          "widget": "fader"
+        },
+        {
+          "param": "Reverb HP",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb LP",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "MIX",
+      "controls": [
+        {
+          "param": "Clean Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Grains Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Loops Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Reverb Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Dry / Texture",
+          "widget": "fader"
+        },
+        {
+          "param": "FX Gain",
+          "widget": "fader"
+        },
+        {
+          "param": "Master Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Soft Limit",
+          "widget": "switch"
+        },
+        {
+          "param": "Clean Send",
+          "widget": "fader"
+        },
+        {
+          "param": "Texture Send",
+          "widget": "fader"
+        },
+        {
+          "param": "Clean Tape",
+          "widget": "fader"
+        },
+        {
+          "param": "Texture Tape",
+          "widget": "fader"
+        },
+        {
+          "param": "Rev Wet",
+          "widget": "fader"
+        },
+        {
+          "param": "Texture Linger",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "FILTERS",
+      "controls": [
+        {
+          "param": "Memory HP",
+          "widget": "knob"
+        },
+        {
+          "param": "Memory LP",
+          "widget": "knob"
+        },
+        {
+          "param": "Grains HP",
+          "widget": "knob"
+        },
+        {
+          "param": "Grains LP",
+          "widget": "knob"
+        },
+        {
+          "param": "Loops HP",
+          "widget": "knob"
+        },
+        {
+          "param": "Loops LP",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb HP",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb LP",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "MORE",
+      "controls": [
+        {
+          "param": "Tempo Fallback",
+          "widget": "knob"
+        },
+        {
+          "param": "Keep Playing",
+          "widget": "knob"
+        },
+        {
+          "param": "Sensitivity",
+          "widget": "knob"
+        },
+        {
+          "param": "Regenerate",
+          "widget": "knob"
+        },
+        {
+          "param": "Familiarity",
+          "widget": "knob"
+        },
+        {
+          "param": "Memory Fade",
+          "widget": "knob"
+        },
+        {
+          "param": "Fresh After",
+          "widget": "knob"
+        },
+        {
+          "param": "Soft Limit",
+          "widget": "switch"
+        }
+      ]
+    }
+  ]
+}

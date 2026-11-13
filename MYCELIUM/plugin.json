@@ -1,0 +1,15 @@
+{
+  "name": "MYCELIUM",
+  "manufacturer": "MYCELIUM",
+  "version": "0.9.8",
+  "format": "vst2",
+  "kind": "effect",
+  "uid": "My98",
+  "numInputs": 2,
+  "numOutputs": 2,
+  "category": "Effect",
+  "file32": "VST/mycelium-arm32.so",
+  "file64": "VST/mycelium-arm64.so",
+  "description": "Granular clouds, musical phrase microloops, tape, reverb and expressive time processing for standalone MPC.",
+  "license": "MIT"
+}
