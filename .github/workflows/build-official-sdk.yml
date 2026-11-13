@@ -1,0 +1,88 @@
+name: Build MYCELIUM with Akai official SDK (Live 3)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "MYCELIUM/**"
+      - ".github/workflows/build-official-sdk.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 65
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout MYCELIUM source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch official inMusic MPC plugin SDK
+        shell: bash
+        run: |
+          git clone --depth 1 https://github.com/inmusic-software/mpc-plugin-builder-sdk.git sdk
+          echo "Official SDK commit:"
+          git -C sdk rev-parse HEAD
+
+      - name: Copy MYCELIUM into the official SDK
+        shell: bash
+        run: |
+          mkdir -p sdk/plugins/MYCELIUM
+          cp -a MYCELIUM/. sdk/plugins/MYCELIUM/
+
+      - name: Verify parameters and Q-Link assignments
+        run: python3 MYCELIUM/tests/validate_port.py
+
+      - name: Run audio engine tests
+        shell: bash
+        run: bash MYCELIUM/tests/run_native_dsp.sh
+
+      - name: Build MYCELIUM for MPC
+        working-directory: sdk
+        shell: bash
+        run: python3 tools/build.py plugins/MYCELIUM --verbose
+
+      - name: Validate MPC plugin
+        working-directory: sdk
+        shell: bash
+        run: python3 tools/validate.py plugins/MYCELIUM
+
+      - name: Test plugin in MPC simulator
+        working-directory: sdk
+        shell: bash
+        run: |
+          NATIVE=$(find plugins/MYCELIUM/build/native -maxdepth 1 -type f \( -name '*.so' -o -name '*.dylib' \) -print -quit)
+          test -n "$NATIVE"
+          .sdk-tools/host_sim "$NATIVE" test --seconds 3 --wav plugins/MYCELIUM/build/host_test.wav
+
+      - name: Verify MPC Live 3 ARM64 build
+        shell: bash
+        run: |
+          FOLDER="sdk/plugins/MYCELIUM/build/MYCELIUM - VST - MYCELIUM"
+          test -s "$FOLDER/VST/mycelium-arm64.so"
+          readelf -h "$FOLDER/VST/mycelium-arm64.so" | grep -q AArch64
+          test -s "$FOLDER/Plugin Skins/TUI.json"
+          test -s "$FOLDER/Plugin Skins/Q-Links.json"
+          test -s "$FOLDER/plugin.json"
+
+      - name: Package MPC plugin
+        shell: bash
+        run: |
+          mkdir -p dist
+          cd sdk/plugins/MYCELIUM/build
+          zip -qr "$GITHUB_WORKSPACE/dist/MYCELIUM-v0.9.8-Akai-SDK-Live3.zip" "MYCELIUM - VST - MYCELIUM"
+
+      - name: Upload MPC plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: MYCELIUM-Official-SDK-Live3
+          path: dist/MYCELIUM-v0.9.8-Akai-SDK-Live3.zip
+          if-no-files-found: error
+          retention-days: 30
